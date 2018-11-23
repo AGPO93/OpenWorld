@@ -6,7 +6,7 @@ using System.IO;
 public class StreamingManager : MonoBehaviour
 {
 
-	void Start ()
+    void Start()
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(Application.streamingAssetsPath);
         //print("Streaming Assets Path: " + Application.streamingAssetsPath);
@@ -16,19 +16,16 @@ public class StreamingManager : MonoBehaviour
         {
             if (file.Name.Contains("player1"))
             {
-                //StartCoroutine("LoadPlayerUI", file);
+                // Loads all the files and then calls function.
+                //StartCoroutine("InstantiateObject", file);
             }
         }
     }
-	
-	void Update ()
-    {
-		
-	}
 
     IEnumerator InstantiateObject(FileInfo file)
     {
         //1
+        // Make sure theres no meta files.
         if (file.Name.Contains("meta"))
         {
             yield break;
@@ -49,19 +46,17 @@ public class StreamingManager : MonoBehaviour
                 }
                 i++;
             }
-            //4
-            string wwwPlayerFilePath = "file://" + file.FullName.ToString();
-            WWW www = new WWW(wwwPlayerFilePath);
-            yield return www;
 
-            GameObject pyr_obj;
-            // obj original, vec 3 position, quat rotation
-            //Object.Instantiate()
+
             //5
             //playerAvatar.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0.5f, 0.5f));
             //playerName.text = tempPlayerName;
-            //https://www.raywenderlich.com/479-using-streaming-assets-in-unity
+            //
         }
+    }
+
+    void LoadFile()
+    {
 
     }
 }

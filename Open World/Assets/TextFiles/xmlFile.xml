@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ObjectCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Objects>
+    <ObjectPrefab name="Pyramid">
+      <position>
+        <x>35</x>
+        <y>0</y>
+        <z>20</z>
+      </position>
+      <rotation>
+        <x>2.504478E-06</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>6</x>
+        <y>6</y>
+        <z>6</z>
+      </scale>
+    </ObjectPrefab>
+  </Objects>
+</ObjectCollection>

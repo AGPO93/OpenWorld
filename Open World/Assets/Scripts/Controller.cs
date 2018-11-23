@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    Rigidbody rb;
     public float speed = 30.0f;
-
-    void Start()
-    {
-        rb = this.GetComponent<Rigidbody>();
-    }
 
     void Update()
     {
