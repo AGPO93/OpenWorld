@@ -1,14 +1,201 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ObjectCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Objects>
-    <ObjectPrefab name="ForestTerrain">
+    <ObjectPrefab name="DeadTree">
       <position>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-41.39903</x>
+        <y>0.636879444</y>
+        <z>138.087692</z>
       </position>
       <rotation>
         <x>0</x>
+        <y>29.8102932</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="DeadTree">
+      <position>
+        <x>-38.27966</x>
+        <y>2.23921776</y>
+        <z>108.952042</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="DeadTree">
+      <position>
+        <x>-19.71186</x>
+        <y>1.79289556</y>
+        <z>85.11978</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="DeadTree">
+      <position>
+        <x>-8.371584</x>
+        <y>3.031468</y>
+        <z>127.875267</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>-17.0413437</x>
+        <y>1.053272</y>
+        <z>141.3043</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>-42.5470352</x>
+        <y>1.01753509</y>
+        <z>119.520073</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>-37.4451828</x>
+        <y>0.587854</y>
+        <z>80.57044</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>-15.2508278</x>
+        <y>1.10939777</y>
+        <z>100.35463</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>16.8479652</x>
+        <y>0.9786781</y>
+        <z>122.842628</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>32.64561</x>
+        <y>1.04776943</y>
+        <z>87.31622</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Pine">
+      <position>
+        <x>-3.06823945</x>
+        <y>1.06845856</y>
+        <z>68.92063</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="ForestTerrain">
+      <position>
+        <x>200</x>
+        <y>0</y>
+        <z>100</z>
+      </position>
+      <rotation>
+        <x>2.504478E-06</x>
         <y>0</y>
         <z>0</z>
       </rotation>
@@ -16,142 +203,6 @@
         <x>5</x>
         <y>1.5</y>
         <z>5</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>-21.8</x>
-        <y>1.42427814</y>
-        <z>-33.6</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>16.8680038</x>
-        <y>0.585099</y>
-        <z>-40.3779068</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>41.034523</x>
-        <y>0.6629941</y>
-        <z>-15.58053</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>41.62204</x>
-        <y>1.05188525</y>
-        <z>22.4540215</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>18.3853741</x>
-        <y>0.454507381</y>
-        <z>41.708168</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>-13.2969732</x>
-        <y>0.9690939</y>
-        <z>42.0808144</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>-45</x>
-        <y>0.380087733</y>
-        <z>24.1</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
-      </scale>
-    </ObjectPrefab>
-    <ObjectPrefab name="Pine">
-      <position>
-        <x>-46</x>
-        <y>0.893962562</y>
-        <z>-12.1</z>
-      </position>
-      <rotation>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </rotation>
-      <scale>
-        <x>3</x>
-        <y>3</y>
-        <z>3</z>
       </scale>
     </ObjectPrefab>
   </Objects>
