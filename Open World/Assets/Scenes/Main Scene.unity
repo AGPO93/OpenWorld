@@ -466,13 +466,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6941a5611b333b45a9b78d35c10e788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetsToLoad:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  prefab: {fileID: 0}
+  trees_list: []
