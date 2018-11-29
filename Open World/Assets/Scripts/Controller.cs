@@ -5,6 +5,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public float speed = 30.0f;
+    public int currentArea = 0;
 
     void Update()
     {

@@ -5,23 +5,23 @@ using UnityEngine;
 public class LoadObjects : MonoBehaviour
 {
     #region Area Lists
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_1 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_2 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_3 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_4 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_5 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_6 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_7 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_8 = new List<GameObject>();
-    [SerializeField]
+    //[SerializeField]
     private List<GameObject> Area_9 = new List<GameObject>();
     #endregion
 
