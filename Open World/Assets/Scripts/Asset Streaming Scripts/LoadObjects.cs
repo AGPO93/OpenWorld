@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoadObjects : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> trees_list = new List<GameObject>();
+    private List<GameObject> Area_1 = new List<GameObject>();
     [SerializeField]
     private List<GameObject> terrain_list = new List<GameObject>();
     private GameObject objToInstantiate;
@@ -32,7 +32,7 @@ public class LoadObjects : MonoBehaviour
 
     private void WriteXML()
     {
-        foreach (GameObject objectPrefab in trees_list)
+        foreach (GameObject objectPrefab in Area_1)
         {
             xmlObject.name = objectPrefab.name;
             xmlObject.position = objectPrefab.transform.position;
