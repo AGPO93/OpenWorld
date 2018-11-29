@@ -31,15 +31,19 @@ public class LoadObjects : MonoBehaviour
     private void Start()
     {
         //WriteXML();
-        xmlContainer = ObjectContainer.Load("Assets/TextFiles/Area9.xml"); 
 
-        foreach (ObjectPrefab object_prefab in xmlContainer.objectList)
-        {
-            createObject(object_prefab.name, object_prefab.position, object_prefab.scale);
-        }
+        LoadContainer("Assets/TextFiles/Area1.xml");
+        LoadContainer("Assets/TextFiles/Area2.xml");
+        LoadContainer("Assets/TextFiles/Area3.xml");
+        LoadContainer("Assets/TextFiles/Area4.xml");
+        LoadContainer("Assets/TextFiles/Area5.xml");
+        LoadContainer("Assets/TextFiles/Area6.xml");
+        LoadContainer("Assets/TextFiles/Area7.xml");
+        LoadContainer("Assets/TextFiles/Area8.xml");
+        LoadContainer("Assets/TextFiles/Area9.xml");
     }
 
-    private void createObject(string name, Vector3 position, Vector3 scale)
+    private void CreateObject(string name, Vector3 position, Vector3 scale)
     {
         GameObject _object;
 
@@ -60,6 +64,16 @@ public class LoadObjects : MonoBehaviour
             xmlContainer.objectList.Add(xmlObject);
             xmlContainer.Save("Assets/TextFiles/Area9.xml");
             xmlContainer = ObjectContainer.Load("Assets/TextFiles/Area9.xml");
+        }
+    }
+
+    private void LoadContainer(string path)
+    {
+        xmlContainer = ObjectContainer.Load(path);
+
+        foreach (ObjectPrefab object_prefab in xmlContainer.objectList)
+        {
+            CreateObject(object_prefab.name, object_prefab.position, object_prefab.scale);
         }
     }
 }
