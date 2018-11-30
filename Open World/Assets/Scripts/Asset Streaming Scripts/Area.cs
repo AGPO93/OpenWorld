@@ -7,8 +7,8 @@ public class Area : MonoBehaviour
     [HideInInspector]
     public List<GameObject> objectsList;
     public List<GameObject> connectedNodes;
-    public bool loaded;
-    //public string path;
+    public List<GameObject> unloadNodes;
+    public bool loaded = true;
 
     private ObjectContainer xmlContainer = new ObjectContainer();
 
@@ -18,7 +18,7 @@ public class Area : MonoBehaviour
 
         foreach (ObjectPrefab object_prefab in xmlContainer.objectList)
         {
-            CreateObject(object_prefab.name, object_prefab.position, object_prefab.rotation, object_prefab.scale, _areaList);
+            CreateObject(object_prefab.name, object_prefab.position, object_prefab.scale, object_prefab.rotation, _areaList);
         }
     }
 
@@ -28,8 +28,8 @@ public class Area : MonoBehaviour
 
         _object = Instantiate(Resources.Load(name, typeof(GameObject))) as GameObject;
         _object.transform.position = position;
-        _object.transform.eulerAngles = rotation;
         _object.transform.localScale = scale;
+        _object.transform.eulerAngles = rotation;
 
         areaList.Add(_object);
     }
@@ -43,9 +43,11 @@ public class Area : MonoBehaviour
 
     public void LoadArea()
     {
-        //the area the players in
-        Debug.Log("Assets/TextFiles/" + gameObject.name + ".xml");
-        LoadXMLContainer("Assets/TextFiles/" + gameObject.name + ".xml", objectsList);
+        if (!loaded)
+        {
+            LoadXMLContainer("Assets/TextFiles/" + gameObject.name + ".xml", objectsList);
+            loaded = true;
+        }
     }
 
     private void LoadAdjacent()
@@ -53,6 +55,15 @@ public class Area : MonoBehaviour
         foreach (GameObject node in connectedNodes)
         {
             node.GetComponent<Area>().LoadArea();
+        }
+
+        foreach (GameObject node in unloadNodes)
+        {
+            foreach(GameObject objs in node.GetComponent<Area>().objectsList)
+            {
+                Destroy(objs);
+            }
+            node.GetComponent<Area>().loaded = false;
         }
     }
 }

@@ -13,7 +13,7 @@ public class AreaCollider : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
-            resourceLoader.GetComponent<LoadObjects>().UpdatePlayerArea(AreaID);
+            resourceLoader.GetComponent<LoadObjects>().UpdatePlayerArea(gameObject);
         }
     }
 }

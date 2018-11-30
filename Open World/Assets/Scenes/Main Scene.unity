@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 8515708}
   - component: {fileID: 8515705}
   - component: {fileID: 8515706}
+  - component: {fileID: 8515707}
   m_Layer: 0
   m_Name: Area2
   m_TagString: Untagged
@@ -155,6 +156,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 2
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &8515707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8515704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1432121231}
+  - {fileID: 608117586}
+  - {fileID: 1766436113}
+  - {fileID: 1739850640}
+  - {fileID: 580726600}
+  unloadNodes:
+  - {fileID: 553498818}
+  - {fileID: 1501229366}
+  - {fileID: 806272079}
+  loaded: 0
 --- !u!4 &8515708
 Transform:
   m_ObjectHideFlags: 0
@@ -293,6 +317,7 @@ GameObject:
   - component: {fileID: 553498822}
   - component: {fileID: 553498819}
   - component: {fileID: 553498820}
+  - component: {fileID: 553498821}
   m_Layer: 0
   m_Name: Area7
   m_TagString: Untagged
@@ -325,6 +350,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 7
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &553498821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553498818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1766436113}
+  - {fileID: 1739850640}
+  - {fileID: 1501229366}
+  unloadNodes:
+  - {fileID: 1432121231}
+  - {fileID: 8515704}
+  - {fileID: 608117586}
+  - {fileID: 580726600}
+  - {fileID: 806272079}
+  loaded: 0
 --- !u!4 &553498822
 Transform:
   m_ObjectHideFlags: 0
@@ -348,6 +396,7 @@ GameObject:
   - component: {fileID: 580726604}
   - component: {fileID: 580726601}
   - component: {fileID: 580726602}
+  - component: {fileID: 580726603}
   m_Layer: 0
   m_Name: Area6
   m_TagString: Untagged
@@ -380,6 +429,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 6
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &580726603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 580726600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 8515704}
+  - {fileID: 608117586}
+  - {fileID: 1739850640}
+  - {fileID: 1501229366}
+  - {fileID: 806272079}
+  unloadNodes:
+  - {fileID: 1432121231}
+  - {fileID: 1766436113}
+  - {fileID: 553498818}
+  loaded: 0
 --- !u!4 &580726604
 Transform:
   m_ObjectHideFlags: 0
@@ -403,6 +475,7 @@ GameObject:
   - component: {fileID: 608117590}
   - component: {fileID: 608117587}
   - component: {fileID: 608117588}
+  - component: {fileID: 608117589}
   m_Layer: 0
   m_Name: Area3
   m_TagString: Untagged
@@ -435,6 +508,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 3
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &608117589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608117586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 8515704}
+  - {fileID: 1739850640}
+  - {fileID: 580726600}
+  unloadNodes:
+  - {fileID: 1432121231}
+  - {fileID: 1766436113}
+  - {fileID: 553498818}
+  - {fileID: 1501229366}
+  - {fileID: 806272079}
+  loaded: 0
 --- !u!4 &608117590
 Transform:
   m_ObjectHideFlags: 0
@@ -458,6 +554,7 @@ GameObject:
   - component: {fileID: 806272083}
   - component: {fileID: 806272080}
   - component: {fileID: 806272081}
+  - component: {fileID: 806272082}
   m_Layer: 0
   m_Name: Area9
   m_TagString: Untagged
@@ -490,6 +587,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 9
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &806272082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 806272079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1739850640}
+  - {fileID: 580726600}
+  - {fileID: 1501229366}
+  unloadNodes:
+  - {fileID: 1432121231}
+  - {fileID: 8515704}
+  - {fileID: 608117586}
+  - {fileID: 1766436113}
+  - {fileID: 553498818}
+  loaded: 0
 --- !u!4 &806272083
 Transform:
   m_ObjectHideFlags: 0
@@ -653,6 +773,12 @@ MonoBehaviour:
   - {fileID: 8515704}
   - {fileID: 1766436113}
   - {fileID: 1739850640}
+  unloadNodes:
+  - {fileID: 608117586}
+  - {fileID: 580726600}
+  - {fileID: 553498818}
+  - {fileID: 1501229366}
+  - {fileID: 806272079}
   loaded: 0
 --- !u!4 &1432121235
 Transform:
@@ -677,6 +803,7 @@ GameObject:
   - component: {fileID: 1501229370}
   - component: {fileID: 1501229367}
   - component: {fileID: 1501229368}
+  - component: {fileID: 1501229369}
   m_Layer: 0
   m_Name: Area8
   m_TagString: Untagged
@@ -709,6 +836,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 8
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &1501229369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501229366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1766436113}
+  - {fileID: 1739850640}
+  - {fileID: 580726600}
+  - {fileID: 553498818}
+  - {fileID: 806272079}
+  unloadNodes:
+  - {fileID: 1432121231}
+  - {fileID: 8515704}
+  - {fileID: 608117586}
+  loaded: 0
 --- !u!4 &1501229370
 Transform:
   m_ObjectHideFlags: 0
@@ -732,6 +882,7 @@ GameObject:
   - component: {fileID: 1739850644}
   - component: {fileID: 1739850641}
   - component: {fileID: 1739850642}
+  - component: {fileID: 1739850643}
   m_Layer: 0
   m_Name: Area5
   m_TagString: Untagged
@@ -764,6 +915,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 5
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &1739850643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739850640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1432121231}
+  - {fileID: 8515704}
+  - {fileID: 608117586}
+  - {fileID: 1766436113}
+  - {fileID: 580726600}
+  - {fileID: 553498818}
+  - {fileID: 1501229366}
+  - {fileID: 806272079}
+  unloadNodes: []
+  loaded: 0
 --- !u!4 &1739850644
 Transform:
   m_ObjectHideFlags: 0
@@ -787,6 +961,7 @@ GameObject:
   - component: {fileID: 1766436117}
   - component: {fileID: 1766436114}
   - component: {fileID: 1766436115}
+  - component: {fileID: 1766436116}
   m_Layer: 0
   m_Name: Area4
   m_TagString: Untagged
@@ -819,6 +994,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 4
   resourceLoader: {fileID: 1916490918}
+--- !u!114 &1766436116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1766436113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f55b39327eb5a469606773310167b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList: []
+  connectedNodes:
+  - {fileID: 1432121231}
+  - {fileID: 8515704}
+  - {fileID: 1739850640}
+  - {fileID: 553498818}
+  - {fileID: 1501229366}
+  unloadNodes:
+  - {fileID: 608117586}
+  - {fileID: 580726600}
+  - {fileID: 806272079}
+  loaded: 0
 --- !u!4 &1766436117
 Transform:
   m_ObjectHideFlags: 0
