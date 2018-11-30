@@ -6,13 +6,14 @@ public class AreaCollider : MonoBehaviour
 {
     [SerializeField]
     private int AreaID;
+    [SerializeField]
+    private GameObject resourceLoader;
 
-    void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.name == "Player")
         {
-            col.GetComponent<Controller>().currentArea = AreaID;
+            resourceLoader.GetComponent<LoadObjects>().UpdatePlayerArea(AreaID);
         }
     }
-
 }
