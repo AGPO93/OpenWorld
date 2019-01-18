@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LoadObjects : MonoBehaviour
 {
-    /* Only for XML file writing. 
-     * private ObjectPrefab xmlObject = new ObjectPrefab();*/
+    // Only for XML file writing. 
+    // private ObjectPrefab xmlObject = new ObjectPrefab();
 
     public void UpdatePlayerArea(GameObject area)
     {

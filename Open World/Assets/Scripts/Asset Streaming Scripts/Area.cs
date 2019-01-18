@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Area : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public List<GameObject> objectsList;
     public List<GameObject> connectedNodes;
     public List<GameObject> unloadNodes;
