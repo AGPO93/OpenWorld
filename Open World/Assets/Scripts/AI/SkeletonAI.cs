@@ -36,7 +36,7 @@ public class SkeletonAI : MonoBehaviour
             if (direction.magnitude > 2)
             // Chase.
             {
-                this.transform.Translate(0, 0, 0.05f);
+                this.transform.Translate(0, 0, 0.5f); //0.05  <<<< OLD SPEED VALUE
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }
