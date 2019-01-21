@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AreaCollider : MonoBehaviour
 {
-    [SerializeField]
-    private int AreaID;
+    public int AreaID;
     [SerializeField]
     private GameObject resourceLoader;
 
@@ -17,7 +16,7 @@ public class AreaCollider : MonoBehaviour
         }
         else if (col.gameObject.tag == "Enemy")
         {
-            col.GetComponent<AIAreaManager>().currentArea = AreaID;
+            col.GetComponent<AIAreaManager>().updateArea(AreaID);
         }
     }
 }

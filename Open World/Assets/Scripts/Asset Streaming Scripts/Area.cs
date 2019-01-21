@@ -12,6 +12,13 @@ public class Area : MonoBehaviour
 
     private ObjectContainer xmlContainer = new ObjectContainer();
 
+    private int area_id;
+
+    void Start()
+    {
+        area_id = gameObject.GetComponent<AreaCollider>().AreaID;
+    }
+
     private void LoadXMLContainer(string path, List<GameObject> _areaList)
     {
         xmlContainer = ObjectContainer.Load(path);
@@ -61,7 +68,21 @@ public class Area : MonoBehaviour
         {
             foreach(GameObject objs in node.GetComponent<Area>().objectsList)
             {
-                Destroy(objs);
+                if (objs.tag == "Enemy")
+                {
+                    if (objs.GetComponent<AIAreaManager>().currentArea != area_id)
+                    {
+                        //nada
+                    }
+                    else
+                    {
+                        Destroy(objs);
+                    }
+                }
+                else
+                {
+                    Destroy(objs);
+                }
             }
             node.GetComponent<Area>().loaded = false;
         }
