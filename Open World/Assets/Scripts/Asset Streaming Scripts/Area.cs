@@ -49,9 +49,10 @@ public class Area : MonoBehaviour
     }
 
     public void LoadArea()
-    {
+    { 
         if (!loaded)
         {
+            GetComponent<Area>().objectsList.Clear();
             LoadXMLContainer("Assets/TextFiles/" + gameObject.name + ".xml", objectsList);
             loaded = true;
         }
@@ -64,6 +65,8 @@ public class Area : MonoBehaviour
             node.GetComponent<Area>().LoadArea();
         }
 
+        List<GameObject> to_remove = new List<GameObject>();
+
         foreach (GameObject node in unloadNodes)
         {
             foreach(GameObject objs in node.GetComponent<Area>().objectsList)
@@ -72,7 +75,7 @@ public class Area : MonoBehaviour
                 {
                     if (objs.GetComponent<AIAreaManager>().currentArea != area_id)
                     {
-                        //nada
+                        to_remove.Add(objs);
                     }
                     else
                     {
@@ -84,6 +87,12 @@ public class Area : MonoBehaviour
                     Destroy(objs);
                 }
             }
+
+            for (int i = to_remove.Count - 1; i > -1; i--)
+            {
+                node.GetComponent<Area>().objectsList.Remove(to_remove[i]);
+            }
+            node.GetComponent<Area>().objectsList.Clear();
             node.GetComponent<Area>().loaded = false;
         }
     }
