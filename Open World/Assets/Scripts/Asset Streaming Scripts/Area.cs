@@ -73,23 +73,26 @@ public class Area : MonoBehaviour
             {
                 if (objs.tag == "Enemy")
                 {
-                    if (objs.GetComponent<AIAreaManager>().currentArea != area_id)
+                    if (objs.GetComponent<SkeletonAI>().currentArea != area_id)
                     {
                         to_remove.Add(objs);
                     }
                     else
                     {
-                        Destroy(objs);
+                        to_remove.Add(objs);
+                        //Destroy(objs);
                     }
                 }
                 else
                 {
-                    Destroy(objs);
+                    to_remove.Add(objs);
+                    //Destroy(objs);
                 }
             }
 
             for (int i = to_remove.Count - 1; i > -1; i--)
             {
+                Destroy(node.GetComponent<Area>().objectsList[i]);
                 node.GetComponent<Area>().objectsList.Remove(to_remove[i]);
             }
             node.GetComponent<Area>().objectsList.Clear();

@@ -16,7 +16,7 @@ public class AreaCollider : MonoBehaviour
         }
         else if (col.gameObject.tag == "Enemy")
         {
-            col.GetComponent<AIAreaManager>().updateArea(AreaID);
+            col.GetComponent<SkeletonAI>().updateArea(AreaID);
         }
     }
 }

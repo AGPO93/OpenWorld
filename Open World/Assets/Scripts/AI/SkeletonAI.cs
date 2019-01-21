@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class SkeletonAI : MonoBehaviour
 {
+    public int currentArea;
     private GameObject player;
     private Animator anim;
 
-	void Start ()
+    void Start()
     {
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player");
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
         Chase();
-	}
+    }
 
     private void Chase()
     {
@@ -54,5 +55,10 @@ public class SkeletonAI : MonoBehaviour
             anim.SetBool("isWalking", false);
             anim.SetBool("isAttacking", false);
         }
+    }
+
+    public void updateArea(int new_area)
+    {
+        currentArea = new_area;
     }
 }

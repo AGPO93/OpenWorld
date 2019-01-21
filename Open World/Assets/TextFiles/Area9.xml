@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ObjectCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Objects>
+    <ObjectPrefab name="Skeleton">
+      <position>
+        <x>197.44381</x>
+        <y>0.2419111</y>
+        <z>166.34498</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>38.97809</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="Skeleton">
+      <position>
+        <x>220.44381</x>
+        <y>0.2419111</y>
+        <z>166.34498</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>38.97809</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>3</x>
+        <y>3</y>
+        <z>3</z>
+      </scale>
+    </ObjectPrefab>
     <ObjectPrefab name="DeadTree">
       <position>
         <x>226.436569</x>
