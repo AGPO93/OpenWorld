@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 54290061471181080}
   - component: {fileID: 136450947431433288}
   - component: {fileID: 114589943631435962}
-  - component: {fileID: 114474933331386668}
+  - component: {fileID: 195381021993622710}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -2051,18 +2051,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114474933331386668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1641047385090902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4bac05d236ee324391c8b3fa991a79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentArea: 0
 --- !u!114 &114589943631435962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2074,6 +2062,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d201501019dbb46bd78af281fdba8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentArea: 0
+  nodeOne: {fileID: 0}
+  nodeTwo: {fileID: 0}
+  nodeThree: {fileID: 0}
+  node1: 
+  node2: 
+  node3: 
 --- !u!136 &136450947431433288
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2185,3 +2180,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.04756728, y: 0.054604553, z: 0.00291197}
     m_Extent: {x: 0.3621694, y: 0.14799494, z: 0.119140536}
   m_DirtyAABB: 0
+--- !u!195 &195381021993622710
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1641047385090902}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 10
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

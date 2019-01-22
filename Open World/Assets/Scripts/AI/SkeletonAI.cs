@@ -1,22 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SkeletonAI : MonoBehaviour
 {
-    public int currentArea;
+    public int currentArea; // delete
     private GameObject player;
     private Animator anim;
+    private bool roaming = false;
+    NavMeshAgent navMeshAgent;
 
-    void Start()
+    [SerializeField]
+    GameObject nodeOne;
+    [SerializeField]
+    GameObject nodeTwo;
+    [SerializeField]
+    GameObject nodeThree;
+    public string node1, node2, node3;
+
+    private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = this.GetComponent<Animator>();
         player = GameObject.Find("Player");
+        navMeshAgent = this.GetComponent<NavMeshAgent>();
+        nodeOne = GameObject.Find(node1);
+        nodeTwo = GameObject.Find(node2);
+        nodeThree = GameObject.Find(node3);
     }
 
-    void Update()
+    private void Update()
     {
-        Chase();
+        Roam();
     }
 
     private void Chase()
@@ -37,7 +52,7 @@ public class SkeletonAI : MonoBehaviour
             if (direction.magnitude > 2)
             // Chase.
             {
-                this.transform.Translate(0, 0, 0.5f); //0.05  <<<< OLD SPEED VALUE
+                this.transform.Translate(0, 0, 0.5f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }
@@ -60,5 +75,35 @@ public class SkeletonAI : MonoBehaviour
     public void updateArea(int new_area)
     {
         currentArea = new_area;
+    } // delete
+
+    private void SetDestination(GameObject waypoint)
+    {
+        Vector3 targetVector = waypoint.transform.position;
+        navMeshAgent.SetDestination(targetVector);
+        // Start walking animation.
+        anim.SetBool("isWalking", true);
+        anim.SetBool("isAttacking", false);
+    }
+
+    private void Roam()
+    {
+        if (roaming == false)
+        {
+            SetDestination(nodeOne);
+            roaming = true;
+        }
+        else if (Vector3.Distance(this.transform.position, nodeOne.transform.position) <= 5)
+        {
+            SetDestination(nodeTwo);
+        }
+        else if (Vector3.Distance(this.transform.position, nodeTwo.transform.position) <= 5)
+        {
+            SetDestination(nodeThree);
+        }
+        else if (Vector3.Distance(this.transform.position, nodeThree.transform.position) <= 5)
+        {
+            SetDestination(nodeOne);
+        }
     }
 }

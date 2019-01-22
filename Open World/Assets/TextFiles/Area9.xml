@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ObjectCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Objects>
+    <ObjectPrefab name="RoamNodeArea91">
+      <position>
+        <x>160</x>
+        <y>0.5</y>
+        <z>158</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="RoamNodeArea92">
+      <position>
+        <x>171</x>
+        <y>0.5</y>
+        <z>187</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ObjectPrefab>
+    <ObjectPrefab name="RoamNodeArea93">
+      <position>
+        <x>193</x>
+        <y>0.5</y>
+        <z>172</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ObjectPrefab>
     <ObjectPrefab name="Skeleton">
       <position>
-        <x>197.44381</x>
+        <x>169.44381</x>
         <y>0.2419111</y>
-        <z>166.34498</z>
+        <z>197.34498</z>
       </position>
       <rotation>
         <x>0</x>
@@ -20,9 +71,9 @@
     </ObjectPrefab>
     <ObjectPrefab name="Skeleton">
       <position>
-        <x>220.44381</x>
+        <x>160.44381</x>
         <y>0.2419111</y>
-        <z>166.34498</z>
+        <z>190.34498</z>
       </position>
       <rotation>
         <x>0</x>
@@ -218,7 +269,7 @@
       </rotation>
       <scale>
         <x>5</x>
-        <y>1.5</y>
+        <y>1</y>
         <z>5</z>
       </scale>
     </ObjectPrefab>

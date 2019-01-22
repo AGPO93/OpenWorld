@@ -37,6 +37,13 @@ public class Area : MonoBehaviour
         _object.transform.position = position;
         _object.transform.localScale = scale;
         _object.transform.eulerAngles = rotation;
+        if (_object.tag == "Enemy")
+        {
+            SkeletonAI skeletonAI = _object.GetComponent<SkeletonAI>();
+            skeletonAI.node1 = "RoamNode" + gameObject.name + "1(Clone)";
+            skeletonAI.node2 = "RoamNode" + gameObject.name + "2(Clone)";
+            skeletonAI.node3 = "RoamNode" + gameObject.name + "3(Clone)";
+        }
 
         areaList.Add(_object);
     }
