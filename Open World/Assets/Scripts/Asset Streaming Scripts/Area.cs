@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class Area : MonoBehaviour
 {
-    //[HideInInspector]
     public List<GameObject> objectsList;
     public List<GameObject> connectedNodes;
     public List<GameObject> unloadNodes;
     public bool loaded = true;
 
     private ObjectContainer xmlContainer = new ObjectContainer();
-
-    private int area_id;
-
-    void Start()
-    {
-        area_id = gameObject.GetComponent<AreaCollider>().AreaID;
-    }
 
     private void LoadXMLContainer(string path, List<GameObject> _areaList)
     {
@@ -76,32 +68,11 @@ public class Area : MonoBehaviour
 
         foreach (GameObject node in unloadNodes)
         {
-            foreach(GameObject objs in node.GetComponent<Area>().objectsList)
+            foreach (GameObject objs in node.GetComponent<Area>().objectsList)
             {
-                if (objs.tag == "Enemy")
-                {
-                    if (objs.GetComponent<SkeletonAI>().currentArea != area_id)
-                    {
-                        to_remove.Add(objs);
-                    }
-                    else
-                    {
-                        to_remove.Add(objs);
-                        //Destroy(objs);
-                    }
-                }
-                else
-                {
-                    to_remove.Add(objs);
-                    //Destroy(objs);
-                }
+                Destroy(objs);
             }
 
-            for (int i = to_remove.Count - 1; i > -1; i--)
-            {
-                Destroy(node.GetComponent<Area>().objectsList[i]);
-                node.GetComponent<Area>().objectsList.Remove(to_remove[i]);
-            }
             node.GetComponent<Area>().objectsList.Clear();
             node.GetComponent<Area>().loaded = false;
         }

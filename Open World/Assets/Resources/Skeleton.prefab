@@ -2062,10 +2062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d201501019dbb46bd78af281fdba8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentArea: 0
-  nodeOne: {fileID: 0}
-  nodeTwo: {fileID: 0}
-  nodeThree: {fileID: 0}
   node1: 
   node2: 
   node3: 
@@ -2198,6 +2194,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.25
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

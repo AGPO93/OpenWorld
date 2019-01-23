@@ -269,7 +269,7 @@
       </rotation>
       <scale>
         <x>5</x>
-        <y>1</y>
+        <y>1.5</y>
         <z>5</z>
       </scale>
     </ObjectPrefab>
