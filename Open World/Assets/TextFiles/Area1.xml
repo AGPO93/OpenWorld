@@ -54,9 +54,9 @@
     </ObjectPrefab>
     <ObjectPrefab name="Skeleton">
       <position>
-        <x>6.44381</x>
+        <x>-45</x>
         <y>0.2419111</y>
-        <z>-18.34498</z>
+        <z>-20</z>
       </position>
       <rotation>
         <x>0</x>
@@ -71,9 +71,9 @@
     </ObjectPrefab>
     <ObjectPrefab name="Skeleton">
       <position>
-        <x>12.44381</x>
+        <x>1</x>
         <y>0.2419111</y>
-        <z>-18.34498</z>
+        <z>-33</z>
       </position>
       <rotation>
         <x>0</x>
@@ -88,9 +88,9 @@
     </ObjectPrefab>
     <ObjectPrefab name="Skeleton">
       <position>
-        <x>9.44381</x>
+        <x>-36</x>
         <y>0.2419111</y>
-        <z>-18.34498</z>
+        <z>-35</z>
       </position>
       <rotation>
         <x>0</x>

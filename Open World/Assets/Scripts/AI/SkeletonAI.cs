@@ -8,6 +8,7 @@ using UnityEngine.AI;
 // currently gets stuck after attacking player
 // must go back to patrolling 
 /// </summary>
+/// 
 
 public class SkeletonAI : MonoBehaviour
 {
@@ -46,22 +47,38 @@ public class SkeletonAI : MonoBehaviour
         Vector3 direction = player.transform.position - this.transform.position;
         float angle = Vector3.Angle(direction, this.transform.forward);
 
-        if (Vector3.Distance(player.transform.position, this.transform.position) < 10 && angle < 30)
+        if (Vector3.Distance(player.transform.position, this.transform.position) < 10 && angle < 60)
         // If in field of view and within distance.
         {
             direction.y = 0;
-
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
                                       Quaternion.LookRotation(direction), 0.1f);
 
-            if (direction.magnitude > 3)
+            if (Vector3.Distance(this.transform.position, player.transform.position) > 3)
             {
                 state = SkeletonAI.State.CHASE;
             }
-            else
-            {
-                state = SkeletonAI.State.ATTACK;
-            }
+
+        }
+
+        if (Vector3.Distance(this.transform.position, nodeTwo.transform.position) > 30)
+        {
+            state = SkeletonAI.State.ROAM;
+        }
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "Player")
+        {
+            state = SkeletonAI.State.ATTACK;
+        }
+    }
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "Player")
+        {
+            state = SkeletonAI.State.ROAM;
         }
     }
 
@@ -84,6 +101,7 @@ public class SkeletonAI : MonoBehaviour
             yield return null;
         }
     }
+
     private void SetDestination(GameObject waypoint)
     {
         anim.SetBool("isAttacking", false);
@@ -96,7 +114,7 @@ public class SkeletonAI : MonoBehaviour
     private void Roam()
     {
         navMeshAgent.speed = 3;
-        if (roaming == false)
+        if (!roaming)
         {
             SetDestination(nodeOne);
             roaming = true;
@@ -119,11 +137,19 @@ public class SkeletonAI : MonoBehaviour
     {
         anim.SetBool("isAttacking", true);
         anim.SetBool("isWalking", false);
+        if (roaming)
+        {
+            roaming = false;
+        }
     }
 
     private void Chase()
     {
-        navMeshAgent.speed = 6;
+        navMeshAgent.speed = 5;
         SetDestination(player);
+        if (roaming)
+        {
+            roaming = false;
+        }
     }
 }
