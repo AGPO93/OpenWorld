@@ -64,8 +64,6 @@ public class Area : MonoBehaviour
             node.GetComponent<Area>().LoadArea();
         }
 
-        List<GameObject> to_remove = new List<GameObject>();
-
         foreach (GameObject node in unloadNodes)
         {
             foreach (GameObject objs in node.GetComponent<Area>().objectsList)
