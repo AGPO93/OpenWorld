@@ -47,8 +47,12 @@ public class SkeletonAI : MonoBehaviour
         Vector3 direction = player.transform.position - this.transform.position;
         float angle = Vector3.Angle(direction, this.transform.forward);
 
-        if (Vector3.Distance(player.transform.position, this.transform.position) < 10 && angle < 60)
+        Vector3 a = Vector3.Normalize(direction) * 10;
+
+        Debug.DrawLine(transform.position, a + transform.position, Vector3.Distance(player.transform.position, this.transform.position) < 10 && angle < 60 ? Color.green : Color.red);
+
         // If in field of view and within distance.
+        if (Vector3.Distance(player.transform.position, this.transform.position) < 10 && angle < 60)
         {
             direction.y = 0;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
